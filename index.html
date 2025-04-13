@@ -1,10 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Software Sob Medida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0a0a0a;
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            color: #00aaff;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(90deg, #0a0a0a, #1f1f1f);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            background-color: #00aaff;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0077cc;
+        }
+
+        section {
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #00aaff;
+        }
+
+        footer {
+            background-color: #0a0a0a;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <h1>AbaWeb</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Transformamos ideias em sistemas inteligentes e escaláveis.</h2>
+    <p>Especialistas em desenvolvimento sob medida com foco em performance, confiabilidade e excelência técnica.</p>
+    <a href="#contato" class="btn">Solicitar proposta</a>
+</section>
+
+<section id="servicos">
+    <h3 class="section-title">Nossos Serviços</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Desenvolvimento Web & APIs</h4>
+            <p>Criação de aplicações modernas e APIs seguras, com arquitetura escalável e testes automatizados.</p>
+        </div>
+        <div class="card">
+            <h4>Integrações & Digitalização</h4>
+            <p>Conectamos sistemas, automatizamos processos e promovemos a transformação digital do seu negócio.</p>
+        </div>
+        <div class="card">
+            <h4>Evolução de Sistemas Legados</h4>
+            <p>Refatoração e modernização de sistemas existentes com foco em performance, segurança e escalabilidade.</p>
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <h3 class="section-title">Sobre Nós</h3>
+    <p style="max-width: 800px; margin: 0 auto; text-align: center">
+        Somos uma equipe sênior apaixonada por engenharia de software. Atuamos com princípios sólidos como POO, SOLID, testes automatizados e arquitetura limpa. Nossa missão é entregar soluções de alto nível que realmente geram valor aos nossos parceiros.
+    </p>
+</section>
+
+<section id="contato">
+    <h3 class="section-title">Fale com a equipe técnica</h3>
+    <form onsubmit="event.preventDefault(); alert('Mensagem enviada!');">
+        <input type="text" placeholder="Nome" required>
+        <input type="email" placeholder="E-mail" required>
+        <textarea rows="5" placeholder="Mensagem" required></textarea>
+        <button type="submit" disabled class="btn">Enviar mensagem</button>
+    </form>
+    <p style="text-align: center; margin-top: 20px">
+        <a class="btn" href="#">WhatsApp</a>
+<!--        <a class="btn" href="https://wa.me/seunumero" target="_blank">WhatsApp</a>-->
+<!--        <a class="btn" href="https://linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a>-->
+        <a class="btn" href="#">LinkedIn</a>
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2025 AbaWeb. Todos os direitos reservados.</p>
+</footer>
 </body>
+
 </html>
